@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagerController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0">
+         <children>
+            <AnchorPane prefHeight="555.0" prefWidth="729.0" />
+            <TabPane layoutX="10.0" layoutY="10.0" prefHeight="576.0" prefWidth="810.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Employees">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="547.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(#05013a,#81b9c5);">
+                                 <children>
+                                    <TableView fx:id="employeeTable" layoutX="14.0" layoutY="14.0" prefHeight="398.0" prefWidth="782.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_employeeid11" prefWidth="90.4000244140625" text="Employee ID" />
+                                          <TableColumn fx:id="col_employeename11" minWidth="8.0" prefWidth="100.79998779296875" text="Employee Name" />
+                                          <TableColumn fx:id="col_phone11" minWidth="0.0" prefWidth="59.20002746582031" text="Phone" />
+                                          <TableColumn fx:id="col_gender11" minWidth="0.0" prefWidth="59.20001220703125" text="Gender" />
+                                          <TableColumn fx:id="col_city11" minWidth="0.0" prefWidth="57.5999755859375" text="City" />
+                                          <TableColumn fx:id="col_password111" minWidth="0.0" prefWidth="72.79998779296875" text="password" />
+                                          <TableColumn fx:id="col_hire11" minWidth="0.0" prefWidth="67.20001220703125" text="Hire Date" />
+                                          <TableColumn fx:id="col_fire11" minWidth="0.0" prefWidth="84.79998779296875" text="Fird Date" />
+                                          <TableColumn fx:id="col_dob11" minWidth="0.0" prefWidth="51.20001220703125" text="DOB" />
+                                          <TableColumn fx:id="col_depid11" minWidth="0.0" prefWidth="68.79998779296875" text="Dep ID" />
+                                          <TableColumn fx:id="col_salary11" minWidth="0.0" prefWidth="70.39996337890625" text="Salary" />
+                                       </columns>
+                                    </TableView>
+                                    <TextField fx:id="emppid1" layoutX="14.0" layoutY="431.0" promptText="Employee ID" />
+                                    <TextField fx:id="emppdate1" layoutX="14.0" layoutY="501.0" promptText="Birth Date(e.g 2000-5-5)" />
+                                    <TextField fx:id="emppname1" layoutX="180.0" layoutY="431.0" promptText="Employee Name" />
+                                    <TextField fx:id="emppcity1" layoutX="180.0" layoutY="469.0" promptText="City" />
+                                    <TextField fx:id="emppgender1" layoutX="14.0" layoutY="469.0" promptText="Gender" />
+                                    <TextField fx:id="emppdepid1" layoutX="180.0" layoutY="501.0" promptText="Dep ID" />
+                                    <TextField fx:id="emppphone1" layoutX="344.0" layoutY="431.0" promptText="Phone" />
+                                    <TextField fx:id="empppass1" layoutX="344.0" layoutY="469.0" promptText="Password" />
+                                    <TextField fx:id="emppsalary1" layoutX="344.0" layoutY="501.0" promptText="Salary" />
+                                    <Button layoutX="506.0" layoutY="442.0" mnemonicParsing="false" onAction="#ADDEmp" text="ADD">
+                                       <font>
+                                          <Font name="Calisto MT" size="28.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="639.0" layoutY="439.0" mnemonicParsing="false" onAction="#refresh1" prefHeight="56.0" prefWidth="130.0" text="Refresh">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Buy Products from Supplier">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="547.0" prefWidth="747.0">
+                           <children>
+                              <AnchorPane layoutX="-1.0" prefHeight="550.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(#05013a,#81b9c5);">
+                                 <children>
+                                    <TableView fx:id="productTable" layoutX="227.0" layoutY="23.0" prefHeight="390.0" prefWidth="586.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_prodid" prefWidth="75.0" text="Product ID" />
+                                          <TableColumn fx:id="col_prodname" prefWidth="91.20001220703125" text="Product name" />
+                                          <TableColumn fx:id="col_depid" prefWidth="97.60003662109375" text="Department ID" />
+                                          <TableColumn fx:id="col_category" prefWidth="76.7999267578125" text="Category" />
+                                          <TableColumn fx:id="col_brand" minWidth="0.0" prefWidth="56.0" text="Brand" />
+                                          <TableColumn fx:id="col_cost" prefWidth="92.7999267578125" text="Cost Per One" />
+                                          <TableColumn fx:id="col_quantity" prefWidth="91.199951171875" text="Quantity Exisit" />
+                                       </columns>
+                                    </TableView>
+                                    <TextField fx:id="prodidtxt" layoutX="14.0" layoutY="125.0" promptText="Product ID" />
+                                    <TextField fx:id="quantity" layoutX="14.0" layoutY="178.0" promptText="Quantity" />
+                                    <Button layoutX="35.0" layoutY="253.0" mnemonicParsing="false" onAction="#Buy" prefHeight="42.0" prefWidth="107.0" text="Buy">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="orderidtxt1" layoutX="14.0" layoutY="72.0" promptText="Order ID" />
+                                    <TextField fx:id="suppidtxt1" layoutX="14.0" layoutY="23.0" promptText="Supplier ID" />
+                                    <Button layoutX="89.0" layoutY="413.0" mnemonicParsing="false" onAction="#refresh2" prefHeight="56.0" prefWidth="130.0" text="Refresh">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Orders">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="547.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(#05013a,#81b9c5);">
+                                 <children>
+                                    <TableView fx:id="orderTable" layoutX="262.0" layoutY="39.0" prefHeight="398.0" prefWidth="534.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_orderid" prefWidth="90.4000244140625" text="Order ID" />
+                                          <TableColumn fx:id="col_suppid" minWidth="8.0" prefWidth="93.5999755859375" text="Supplier ID" />
+                                          <TableColumn fx:id="col_date" minWidth="0.0" prefWidth="137.5999755859375" text="Date" />
+                                          <TableColumn fx:id="col_totalprice" minWidth="0.0" prefWidth="109.5999755859375" text="Total Price" />
+                                          <TableColumn fx:id="col_productid" minWidth="0.0" prefWidth="97.60009765625" text="Product ID" />
+                                       </columns>
+                                    </TableView>
+                                    <Button layoutX="45.0" layoutY="82.0" mnemonicParsing="false" onAction="#refresh3" prefHeight="56.0" prefWidth="130.0" text="Refresh">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Customers">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="547.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(#05013a,#81b9c5);">
+                                 <children>
+                                    <TableView fx:id="customerTable" layoutX="212.0" layoutY="39.0" prefHeight="398.0" prefWidth="586.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_customerid1" prefWidth="90.4000244140625" text="customer ID" />
+                                          <TableColumn fx:id="col_customername1" minWidth="8.0" prefWidth="113.5999755859375" text="Customer Name" />
+                                          <TableColumn fx:id="col_phone1" minWidth="0.0" prefWidth="95.20001220703125" text="Phone" />
+                                          <TableColumn fx:id="col_gender1" minWidth="0.0" prefWidth="77.60003662109375" text="Gender" />
+                                          <TableColumn fx:id="col_city1" minWidth="0.0" prefWidth="80.00006103515625" text="City" />
+                                          <TableColumn fx:id="col_password11" minWidth="0.0" prefWidth="116.800048828125" text="password" />
+                                       </columns>
+                                    </TableView>
+                                    <Button layoutX="154.0" layoutY="448.0" mnemonicParsing="false" onAction="#refresh4" prefHeight="56.0" prefWidth="130.0" text="Refresh">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="custid" layoutX="14.0" layoutY="112.0" prefHeight="50.0" prefWidth="159.0" promptText="Customer ID" />
+                                    <Button layoutX="46.0" layoutY="196.0" mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="41.0" prefWidth="95.0" text="Delete">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="14.0" layoutY="55.0" text="Delete A customer :" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Suppliers">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="547.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(#05013a,#81b9c5);">
+                                 <children>
+                                    <TableView fx:id="supplierTable" layoutX="262.0" layoutY="39.0" prefHeight="398.0" prefWidth="534.0">
+                                       <columns>
+                                          <TableColumn fx:id="col_supplierid2" minWidth="8.0" prefWidth="117.5999755859375" text="Supplier ID" />
+                                          <TableColumn fx:id="col_suppliername2" minWidth="0.0" prefWidth="116.79998779296875" text="Supplier Name" />
+                                          <TableColumn fx:id="col_city2" minWidth="0.0" prefWidth="154.39996337890625" text="City" />
+                                       </columns>
+                                    </TableView>
+                                    <Button layoutX="43.0" layoutY="40.0" mnemonicParsing="false" onAction="#refresh5" prefHeight="56.0" prefWidth="130.0" text="Refresh">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Change password">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="547.0" prefWidth="810.0">
+                                 <children>
+                                    <Label layoutX="99.0" layoutY="63.0" text="your password :">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="101.0" layoutY="129.0" text="new password :">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="prevpassword" layoutX="255.0" layoutY="60.0" prefHeight="36.0" prefWidth="193.0" />
+                                    <TextField fx:id="newpassword" layoutX="255.0" layoutY="126.0" prefHeight="36.0" prefWidth="193.0" />
+                                    <Button layoutX="255.0" layoutY="219.0" mnemonicParsing="false" onAction="#change" prefHeight="46.0" prefWidth="142.0" text="Change">
+                                       <font>
+                                          <Font name="Arial Narrow" size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <ImageView fitHeight="247.0" fitWidth="302.0" layoutX="515.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../bin/cart.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Add Product">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="547.0" prefWidth="810.0">
+                                 <children>
+                                    <TextField fx:id="productname10" layoutX="35.0" layoutY="79.0" prefHeight="36.0" prefWidth="193.0" promptText="Product Name" />
+                                    <Button layoutX="54.0" layoutY="437.0" mnemonicParsing="false" onAction="#ADD" prefHeight="46.0" prefWidth="130.0" text="ADD">
+                                       <font>
+                                          <Font name="Arial" size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <ImageView fitHeight="497.0" fitWidth="643.0" layoutX="313.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@addProduct.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="category10" layoutX="35.0" layoutY="186.0" prefHeight="36.0" prefWidth="193.0" promptText="category" />
+                                    <TextField fx:id="departmentid10" layoutX="35.0" layoutY="134.0" prefHeight="36.0" prefWidth="193.0" promptText="Department ID" />
+                                    <TextField fx:id="brand10" layoutX="35.0" layoutY="245.0" prefHeight="36.0" prefWidth="193.0" promptText="Brand" />
+                                    <TextField fx:id="costperone10" layoutX="35.0" layoutY="298.0" prefHeight="36.0" prefWidth="193.0" promptText="Cost Per One" />
+                                    <TextField fx:id="saleperone10" layoutX="35.0" layoutY="363.0" prefHeight="36.0" prefWidth="193.0" promptText="Sale Per One" />
+                                    <TextField fx:id="productid10" layoutX="35.0" layoutY="30.0" prefHeight="36.0" prefWidth="193.0" promptText="Product ID" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
